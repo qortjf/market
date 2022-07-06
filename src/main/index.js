@@ -19,13 +19,7 @@ function MainPage() {
     
     
     return (
-<div>
-    <div id="header">
-        <div id="header-aea">
-            <img src="images/icons/logo.png" />
-        </div>
-    </div>
-    <div id="body">
+        <div>
         <div id="banner">
             <img src="images/banners/banner1.png" />
         </div>
@@ -36,7 +30,7 @@ function MainPage() {
                     return (
             
             <div className= "product-card">
-                <Link className="product-link" to={"/products/"+ index}>
+                <Link className="product-link" to={"/products/" + product.id}>
             <div>
                 <img className="product-img" src={product.imageUrl}/>
             </div>
@@ -53,12 +47,9 @@ function MainPage() {
                     )
                 })
             }
-            
         </div>
-</div>
-    <div id="footer"></div>
-</div>
+        </div>
     );
-}
+        }
 
 export default MainPage;
